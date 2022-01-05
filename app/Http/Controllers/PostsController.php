@@ -82,3 +82,25 @@ class PostsController extends Controller
         //
     }
 }
+
+// N.B.:
+/*
+Create:
+we need to call the /blog method
+-> /blog/create
+
+Read:
+-> /blog/index
+but index won't be visible
+-> /blog
+
+Update:
+-> /blog/update?
+we need to tell the app what we need to update
+-> /blog/{slug}
+
+Delete:
+-> /blog/{slug}
+we need to do this for the delete too
+but how to distinguish delete from update ?
+ */
