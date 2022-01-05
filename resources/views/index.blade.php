@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="sm:grid grid-cols-2 gap-20 w-25 mx-auto py-15 border-b border-gray-200">
+  <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
     <div>
       <img 
         src="https://cdn.pixabay.com/photo/2017/11/14/08/07/glasses-2947708_960_720.jpg"
@@ -25,17 +25,24 @@
     </div>
 
     <div class="m-auto sm:m-auto text-left w-4/5 block">
-      <h2 class="text-3xl font-extrabold text-gray-600">
+      <h2 class="text-4xl font-extrabold text-gray-600">
         Struggling to be a better web developer?
       </h2>
 
-      <p class="py-8 text-gray-500 text-s">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        Laborum odio commodi iusto culpa distinctio numquam reiciendis
-        minus ducimus quis optio voluptatem quaerat rem nihil ea accusantium
-        nostrum, vero doloremque iste temporibus ad unde dolores in aliquam
-        quibusdam?
+      <p class="py-8 text-gray-500 text-l">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor!
       </p>
+
+      <p class="font-extrabold text-gray-600 text-l pb-9">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quibusdam aliquam velit nisi facilis soluta ipsam nulla, quaerat animi vero.
+      </p>
+
+      <a href="/blog" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+        Find Out More
+      </a>
     </div>
   </div>
+
+  <div></div>
 @endsection
