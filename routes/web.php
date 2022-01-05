@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Homepage routes
+ */
+Route::get('/', [PagesController::class, 'index']);
+
+Route::resource('/blog', PostsController::class);
+
+/**
+ * Routes needed for authentication
+ * generated automatically because of the --auth flag during tailwind import
+ */
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
