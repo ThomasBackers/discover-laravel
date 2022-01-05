@@ -25,7 +25,17 @@
     </div>
 
     <div class="m-auto sm:m-auto text-left w-4/5 block">
-      <h2 class="text-3xl"></h2>
+      <h2 class="text-3xl font-extrabold text-gray-600">
+        Struggling to be a better web developer?
+      </h2>
+
+      <p class="py-8 text-gray-500 text-s">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Laborum odio commodi iusto culpa distinctio numquam reiciendis
+        minus ducimus quis optio voluptatem quaerat rem nihil ea accusantium
+        nostrum, vero doloremque iste temporibus ad unde dolores in aliquam
+        quibusdam?
+      </p>
     </div>
   </div>
 @endsection
