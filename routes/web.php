@@ -20,6 +20,12 @@ use App\Http\Controllers\PostsController;
  */
 Route::get('/', [PagesController::class, 'index']);
 
+/**
+ * Blog routes
+ * The 'resource' route type is available because of PostController being created
+ * through Artisan with a --resource flag. => php artisan route:list --name=blog
+ * to see exactly what it made
+ */
 Route::resource('/blog', PostsController::class);
 
 /**
