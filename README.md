@@ -8,11 +8,11 @@
 </p>
 
 <p>
-  <a href="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/bd4dddd71a8b58eb7442369b69e065fedb732742/.github/logo-light.svg" target="_blank">
-    <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/bd4dddd71a8b58eb7442369b69e065fedb732742/.github/logo-dark.svg" alt="Tailwind CSS" width="350" height="70">
+  <a href="https://tailwindcss.com/#gh-light-mode-only" target="_blank">
+    <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/bd4dddd71a8b58eb7442369b69e065fedb732742/.github/logo-light.svg" alt="Tailwind CSS" width="350" height="70">
   </a>
   <a href="https://tailwindcss.com/#gh-dark-mode-only" target="_blank">
-    <img src="./.github/logo-dark.svg" alt="Tailwind CSS" width="350" height="70">
+    <img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/bd4dddd71a8b58eb7442369b69e065fedb732742/.github/logo-dark.svg" alt="Tailwind CSS" width="350" height="70">
   </a>
 </p>
 
