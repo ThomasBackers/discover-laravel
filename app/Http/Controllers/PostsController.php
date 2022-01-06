@@ -96,11 +96,15 @@ but index won't be visible
 
 Update:
 -> /blog/update?
-we need to tell the app what we need to update
--> /blog/{slug}
+nope we need to tell the app what we need to update
+-> /blog/{slug} -> PUT or PATCH
 
 Delete:
--> /blog/{slug}
-we need to do this for the delete too
-but how to distinguish delete from update ?
+-> /blog/{id} -> DELETE
+
+Show:
+-> /blog/{id} -> GET
+
+Edit:
+-> /blog/{id}/edit -> GET
  */
