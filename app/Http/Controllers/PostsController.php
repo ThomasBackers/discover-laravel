@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostsController extends Controller
 {
@@ -43,8 +44,28 @@ class PostsController extends Controller
             'image' => 'required|mimes:jpg,png,jpeg,webp|max:5048'
         ]);
 
-        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
-        dd($newImageName);
+        // createSlug takes 3 params: 
+        // the model, 
+        // the table column where you have to push the slug
+        // the title since we want to turn it into a a slug
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        // let's create a new name for our image to store it on the server
+        $newImageName = uniqid() . '-' . $slug . '.' . $request->image->extension();
+        // move the image into the /public/images directory (create it if needed)
+        // and name the file with $newImageName value
+        $request->image->move(public_path('images'), $newImageName);
+
+        Post::create([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'slug' => $slug,
+            'image_path' => $newImageName,
+            'user_id' => auth()->user()->id
+        ]);
+
+        // we want to go back to /blog when post is ok
+        // with a message to confirm it's done to the user
+        return redirect('/blog')->with('message', 'Your post has been added');
     }
 
     /**

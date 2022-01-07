@@ -11,6 +11,15 @@ class Post extends Model
     use HasFactory;
     use Sluggable;
 
+    // here we pass the table columns that need to be filled in
+    protected $fillable = [
+        'title',
+        'slug',
+        'description',
+        'image_path',
+        'user_id'
+    ];
+
     public function user()
     {
         // this goes hand in hand with the User model post function
