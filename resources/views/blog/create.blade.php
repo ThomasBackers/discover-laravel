@@ -8,6 +8,18 @@
       </h1>
     </div>
 
+    @if ($errors->any())
+      <div class="w4/5 m-auto">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li class="w-1/5 mb-4 text-gray-50 bg-red-700 rounded-2xl py-4 px-4">
+              {{ $error }}
+            </li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
     <div class="w4/5 m-auto pt-20">
       <!-- enctype needed to let the app know that we gonna upload a file -->
       <form action="/blog" method="POST" enctype="multipart/form-data">

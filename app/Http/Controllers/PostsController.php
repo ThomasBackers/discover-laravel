@@ -36,7 +36,15 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            // max is the max size
+            'image' => 'required|mimes:jpg,png,jpeg,webp|max:5048'
+        ]);
+
+        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
+        dd($newImageName);
     }
 
     /**
