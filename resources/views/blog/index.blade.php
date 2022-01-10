@@ -33,7 +33,7 @@
       <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
         <div>
           <img 
-            src="https://cdn.pixabay.com/photo/2017/11/14/08/07/glasses-2947708_960_720.jpg"
+            src="{{ asset('images/' . $post->image_path) }}"
             alt=""
             width="700"
           >
