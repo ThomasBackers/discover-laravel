@@ -2,6 +2,7 @@
 
 <p align="center"><a href="https://tailwindcss.com/" target="_blank"><img src="https://raw.githubusercontent.com/tailwindlabs/tailwindcss/bd4dddd71a8b58eb7442369b69e065fedb732742/.github/logo-light.svg" width="400"></a></p>
 
+
 # Welcome to this Laravel + Tailwind project
 
 Here's the link to the tutorial I followed: [Click me](https://www.youtube.com/watch?v=HKJDLXsTr8A)
