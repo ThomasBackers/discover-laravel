@@ -59,6 +59,18 @@
             >
               Keep Reading
             </a>
+
+            <!-- Here we need an edit button but we only want to show it to the author if he's logged in -->
+            @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+              <span class="float-right">
+                <a
+                  href="/blog/{{ $post->slug }}/edit"
+                  class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2"
+                >
+                  Edit
+                </a>
+              </span>
+            @endif
           </span>
         </div>
       </div>
