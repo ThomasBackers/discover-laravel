@@ -8,6 +8,17 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostsController extends Controller
 {
+    // we have a problem right now:
+    // we check for auth to access some pages BUT we can still access it if we already know the path to those pages
+    // we could simply write it down the URL and it's done so:
+    public function __construct()
+    {
+        // the inner array contains the methods that a user can access if they're not logged in
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+        // so from now if we try to access '/blog/create' without being logged in for example
+        // we'll be redirected to the login page
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -126,7 +137,9 @@ class PostsController extends Controller
      */
     public function destroy($slug)
     {
-        //
+        $post = Post::where('slug', $slug);
+        $post->delete();
+        return redirect('/blog')->with('message', 'Your post has been deleted');
     }
 }
 
