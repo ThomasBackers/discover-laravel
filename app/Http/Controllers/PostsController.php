@@ -71,12 +71,17 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        // we want to pass one post to the view
+        // get it from the Post model
+        // where the slug field would be the slug in the URI
+        // (so $slug comes from the URI)
+        // we need to say that we need the first port that match
+        return view('blog.show')->with('post', Post::where('slug', $slug)->first());
     }
 
     /**
@@ -117,7 +122,8 @@ class PostsController extends Controller
 // N.B.:
 /*
 Create:
-we need to call the /blog method
+we need to call the create method to show it (GET)
+and the store method to post it (POST)
 -> /blog/create
 
 Read:
