@@ -99,21 +99,32 @@ class PostsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $slug)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        Post::where('slug', $slug)->update([
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'slug' => $slug,
+            'user_id' => auth()->user()->id
+        ]);
+        return redirect('/blog')->with('message', 'Your post has been upated');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($slug)
     {
         //
     }
