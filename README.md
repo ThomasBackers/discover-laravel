@@ -10,6 +10,6 @@ Here's the link to the tutorial I followed: [Click me](https://www.youtube.com/w
 
 A blog (made with Laravel 8 & TailwindCSS of course) which allowed me: 
 
-- To better understand what is the MVC architectural pattern.
+- To better understand the MVC architectural pattern.
 - To make a nice CRUD with Laravel.
 - And to prototype a simple design quickly with Tailwind.
