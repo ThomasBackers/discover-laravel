@@ -26,6 +26,8 @@ class LoginController extends Controller
      *
      * @var string
      */
+    // we want to change this redirect as the original view named home doesn't exist anymore:
+    // so we have to go to app/Providers/RouteServiceProvider.php
     protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
